@@ -1,0 +1,119 @@
+<!DOCTYPE HTML>
+<!--
+	Phantom by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
+	<head>
+		<title>PanZheng Zhuang MySQL Project</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="assets/css/main.css" />
+		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+	</head>
+	<body class="is-preload">
+		<!-- Wrapper -->
+			<div id="wrapper">
+
+				<!-- Header -->
+					<header id="header">
+						<div class="inner">
+
+							<!-- Logo -->
+								<a href="index.html" class="logo">
+									<span class="title">PanZheng Zhuang</span>
+								</a>
+
+							<!-- Nav -->
+								<nav>
+									<ul>
+										<li><a href="#menu">Menu</a></li>
+									</ul>
+								</nav>
+
+						</div>
+					</header>
+
+				<!-- Menu -->
+					<nav id="menu">
+						<h2>Menu</h2>
+						<ul>
+							<li><a href="index.html">Home</a></li>
+							<li><a href="mysql.html">MySQL</a></li>
+							<li><a href="excel.html">Excel</a></li>
+							<li><a href="tableau.html">Tableau</a></li>
+							<li><a href="power_bi.html">Power BI</a></li>
+							<li><a href="python_pandas.html">Python & Pandas</a></li>
+							<li><a href="credit_card.html">Credit Card</a></li>
+						</ul>
+					</nav>
+
+				<!-- Main -->
+					<div id="main">
+						<div class="inner">
+							<h1>MySQL Project: Data Cleaning & Exploratory Data Analysis</h1>
+							<ul class="actions stacked">
+								<li><a href="https://github.com/Zhenghappy-31/Portfolio/tree/main/MySQL/Layoffs%20Project" class="button primary">Project Page</a></li>
+							</ul>
+							<span class="image main"><img src="images/mysql/MySQL.jpg" alt="" /></span>
+							<h2>Project Description:</h2>
+							<p>In this project, I focused on cleaning a dataset related to company layoffs and performed exploratory data analysis (EDA) using MySQL. The dataset included multiple columns such as company, location, industry, total laid off, percentage laid off, date, and other attributes. Here’s a breakdown of the steps I followed:</p>
+							
+							<p>
+								<b>1. Data Cleaning:</b>
+								<li><b>Duplicate Data:</b> I used the <i><u>ROW_NUMBER()</u></i> function to identify and remove duplicate entries based on multiple columns, such as company name, location, and industry. After identifying the duplicates, I created a clean staging table where only unique records were retained.</li>
+								<li><b>Standardizing Data:</b> I standardized columns by trimming unnecessary spaces from company names and cleaning up industry labels. For example, I standardized all variations of "Crypto" into one label. Similarly, I cleaned the country field by removing extra characters like periods and formatting the date column into a proper <i><u>DATE</u></i> type.</li>
+								<li><b>Fixing Null and Blank Values:</b> To handle missing or blank values in certain fields like the industry column, I cross-referenced data from the same company and location to fill in the missing fields wherever possible.</li>
+								<li><b>Removing Unreliable Data:</b> I deleted rows where crucial data like total laid off or percentage laid off was missing or unreliable, ensuring only relevant records were retained for analysis.</li>
+
+							</p>
+							<p>
+								<b>2. Exploratory Data Analysis (EDA)</b>
+								<li><b>Date Range:</b> I determined the date range of the layoffs data by finding the minimum and maximum dates from the cleaned table.</li>
+								<li><b>Most Impacted Location:</b> I calculated the total number of layoffs for each location and identified the locations with the highest total layoffs.</li>
+								<li><b>Average Layoff Percentage by Industry:</b> I calculated the average percentage of layoffs and the average total laid off for each industry. Additionally, I computed the total number of employees per industry based on these averages.</li>
+								<li><b>Rolling Monthly Layoff Total:</b> I calculated the rolling total number of layoffs for each month using window functions to observe trends over time.</li>
+								<li><b>Top 5 Companies with Largest Layoffs Each Year:</b> I ranked companies by their total layoffs for each year and identified the top 5 companies with the largest layoffs annually.</li>
+							</p>
+							<p>This project improved my skills in SQL query optimization, data cleaning, and using advanced SQL functions like window functions, CTE (Common Table Expressions), and aggregate functions to handle complex datasets. It also helped me draw valuable insights through exploratory data analysis, which could be beneficial for decision-making.</p>
+							<ul class="actions stacked">
+								<li><a href="https://github.com/Zhenghappy-31/Portfolio/tree/main/MySQL/Layoffs%20Project" class="button primary">Project Page</a></li>
+							</ul>
+						</div>
+					</div>
+
+				<!-- Footer -->
+					<footer id="footer">
+						<div class="inner">
+							<section>
+								<h2>Location</h2>
+								<form method="post" action="#">
+									<div class="fields">
+										<div class="field half">
+											<p> Dallas, TX</p>
+										</div>
+									</div>
+								</form>
+							</section>
+							<section>
+								<h2>Social</h2>
+								<ul class="icons">
+									<li><a href="https://www.linkedin.com/in/panzheng-zhuang/" class="icon brands style2 fa-linkedin"><span class="label">Twitter</span></a></li>
+									<li><a href="https://github.com/Zhenghappy-31/Portfolio/tree/main" class="icon brands style2 fa-github"><span class="label">GitHub</span></a></li>
+								</ul>
+							</section>
+						</div>
+					</footer>
+
+			</div>
+
+		<!-- Scripts -->
+			<script src="assets/js/jquery.min.js"></script>
+			<script src="assets/js/browser.min.js"></script>
+			<script src="assets/js/breakpoints.min.js"></script>
+			<script src="assets/js/util.js"></script>
+			<script src="assets/js/main.js"></script>
+
+	</body>
+</html>
